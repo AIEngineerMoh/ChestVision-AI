@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChestVision-AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6f6a1d4f6d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>🫁 ChestVision-AI</h1>
+        <p class="subtitle">
+            AI-Powered Chest X-ray Pneumonia Detection
+        </p>
+
+        <!-- Upload -->
+
+        <div class="upload-box">
+
+            <input type="file"
+                   id="imageInput"
+                   accept="image/*"
+                   hidden>
+
+            <label for="imageInput" class="upload-btn">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                <span>Select Chest X-ray Image</span>
+
+            </label>
+
+        </div>
+
+
+        <!-- Preview -->
+
+        <div class="preview">
+
+            <img id="previewImage"
+                 src=""
+                 alt="Preview">
+
+        </div>
+
+
+        <!-- Button -->
+
+        <button id="predictBtn">
+
+            🔍 Analyze X-ray
+
+        </button>
+
+
+        <!-- Loading -->
+
+        <div id="loading">
+
+            <div class="spinner"></div>
+
+            <p>Analyzing...</p>
+
+        </div>
+
+
+        <!-- Result -->
+
+        <div id="result">
+
+            <h2>Diagnosis</h2>
+
+            <p>
+
+                Prediction :
+                <span id="prediction">-</span>
+
+            </p>
+
+            <p>
+
+                Confidence :
+                <span id="confidence">-</span>
+
+            </p>
+
+            <br>
+
+            <h3>Probabilities</h3>
+
+
+            <div class="probability">
+
+                <div class="label">
+
+                    Normal
+
+                    <span id="normalValue">
+
+                        0%
+
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div id="normalBar"
+                         class="bar"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="probability">
+
+                <div class="label">
+
+                    Pneumonia
+
+                    <span id="pneumoniaValue">
+
+                        0%
+
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div id="pneumoniaBar"
+                         class="bar danger"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
