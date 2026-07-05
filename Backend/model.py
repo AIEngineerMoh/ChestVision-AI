@@ -40,6 +40,4 @@ def predict(image: Image.Image):
         "confidence": round(confidence.item() * 100, 2),
         "probabilities": probs
     }
-    #cd C:\Users\jddkd\OneDrive\Desktop\ChestVision-AI\Backend uvicorn app:app --reload
-
-#uvicorn app:app --reload
+    
